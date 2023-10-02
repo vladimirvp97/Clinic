@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 142356
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    defer-datasource-initialization: true
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 20
+          time_zone: UTC
+        use_sql_comments: true
+        format_sql: true
+        temp:
+          use_jdbc_metadata_defaults: false

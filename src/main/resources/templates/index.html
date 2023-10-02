@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Get Tickets</title>
+</head>
+<body>
+
+<h1>Get Tickets</h1>
+
+<form action="/free-tickets" method="get">
+    <div>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate">
+    </div>
+    <div>
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate">
+    </div>
+    <div>
+        <label for="specialization">Specialization:</label>
+        <select id="specialization" name="specialization">
+            <option value="Cardiologist">Cardiologist</option>
+            <option value="Dermatologist">Dermatologist</option>
+            <option value="Orthopedist">Orthopedist</option>
+            <option value="Neurologist">Neurologist</option>
+            <option value="Pediatrician">Pediatrician</option>
+        </select>
+    </div>
+    <button type="submit">Get Tickets</button>
+</form>
+
+
+<h1>Take a Free Ticket</h1>
+
+<form action="/take-ticket" method="post">
+    <div>
+        <label for="idOfTicket">ID of Ticket:</label>
+        <input type="text" id="idOfTicket" name="idOfTicket">
+    </div>
+    <div>
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname">
+    </div>
+    <div>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname">
+    </div>
+    <div>
+        <label for="fathername">Father's Name:</label>
+        <input type="text" id="fathername" name="fathername">
+    </div>
+
+    <button type="submit">Go</button>
+</form>
+
+<h1>View All Ticket Took By One</h1>
+
+<form action="/tickets-by-patient" method="get">
+    <div>
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname">
+    </div>
+    <div>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname">
+    </div>
+    <div>
+        <label for="fathername">Father's Name:</label>
+        <input type="text" id="fathername" name="fathername">
+    </div>
+
+    <button type="submit">Go</button>
+</form>
+
+</body>
+</html>
